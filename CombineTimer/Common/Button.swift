@@ -11,7 +11,7 @@ import UIKit
 class Button: UIButton {
 
     // MARK: IBInspectable
-    
+
     @IBInspectable var cornerRadius: CGFloat = 0
     @IBInspectable var borderColor: UIColor = .clear
     @IBInspectable var borderWidth: CGFloat = 0
@@ -19,15 +19,15 @@ class Button: UIButton {
     @IBInspectable var shadowColor: UIColor = .clear
     @IBInspectable var shadowOffset: CGSize = .zero
     @IBInspectable var shadowOpacity: Float = 0
-    
+
     // MARK: Overrides
-    
+
     override var isEnabled: Bool {
         didSet {
             alpha = isEnabled ? 1 : 0.4
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -52,7 +52,7 @@ class Button: UIButton {
                                for: .normal)
         }
     }
-    
+
     private func commonInit() {
         isExclusiveTouch = true
         layer.masksToBounds = true

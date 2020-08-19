@@ -9,13 +9,13 @@
 import UIKit
 
 final class TimerViewController: UIViewController {
-    
+
     // MARK: IBOutlet
-    
+
     // MARK: Properties
-    
+
     // MARK: Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigation()
@@ -23,7 +23,7 @@ final class TimerViewController: UIViewController {
 }
 
 extension TimerViewController {
-    
+
     private func configureNavigation() {
         navigationItem.title = "タイマー"
     }
