@@ -1,0 +1,6 @@
+xcassets:
+    inputs: CombineTimer/Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: CombineTimer/Generated/Asset.swift
+        
