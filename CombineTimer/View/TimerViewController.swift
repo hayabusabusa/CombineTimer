@@ -12,6 +12,8 @@ final class TimerViewController: UIViewController {
 
     // MARK: IBOutlet
 
+    @IBOutlet private weak var secondsLabel: UILabel!
+
     // MARK: Properties
 
     private var viewModel: TimerViewModelType!
@@ -22,6 +24,20 @@ final class TimerViewController: UIViewController {
         super.viewDidLoad()
         configureNavigation()
         bindViewModel()
+    }
+
+    // MARK: IBAction
+
+    @IBAction private func onTapResetButton(_ sender: UIButton) {
+        viewModel.input.tappedResetButton()
+    }
+
+    @IBAction private func onTapStartButton(_ sender: UIButton) {
+        viewModel.input.tappedStartButton()
+    }
+
+    @IBAction private func onTapPauseButton(_ sender: UIButton) {
+        viewModel.input.tappedPauseButton()
     }
 }
 
