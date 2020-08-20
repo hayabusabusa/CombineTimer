@@ -27,5 +27,6 @@ extension TimerViewController {
     private func configureNavigation() {
         navigationItem.title = "タイマー"
         navigationItem.titleView = UIImageView(image: Asset.imgTitle.image)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Asset.icList.image, style: .plain, target: self, action: nil)
     }
 }
