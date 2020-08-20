@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7118EC3124EE0658004A3530 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118EC3024EE0658004A3530 /* Asset.swift */; };
+		7118EC3424EE1484004A3530 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118EC3324EE1484004A3530 /* TimerViewModel.swift */; };
 		71FACDA224DBE06800D133E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDA124DBE06800D133E4 /* AppDelegate.swift */; };
 		71FACDA424DBE06800D133E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDA324DBE06800D133E4 /* SceneDelegate.swift */; };
 		71FACDAB24DBE06B00D133E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71FACDAA24DBE06B00D133E4 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		7118EC3024EE0658004A3530 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		7118EC3324EE1484004A3530 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		71FACD9E24DBE06800D133E4 /* CombineTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FACDA124DBE06800D133E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71FACDA324DBE06800D133E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		7118EC3224EE1463004A3530 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7118EC3324EE1484004A3530 /* TimerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		71FACD9524DBE06800D133E4 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 			children = (
 				71FACDA124DBE06800D133E4 /* AppDelegate.swift */,
 				71FACDA324DBE06800D133E4 /* SceneDelegate.swift */,
+				7118EC3224EE1463004A3530 /* ViewModel */,
 				71FACDC724DBE0A900D133E4 /* View */,
 				71FACDC824DBE1B000D133E4 /* Common */,
 				7118EC2D24EE04D1004A3530 /* Generated */,
@@ -256,6 +267,7 @@
 				71FACDA224DBE06800D133E4 /* AppDelegate.swift in Sources */,
 				7118EC3124EE0658004A3530 /* Asset.swift in Sources */,
 				71FACDA424DBE06800D133E4 /* SceneDelegate.swift in Sources */,
+				7118EC3424EE1484004A3530 /* TimerViewModel.swift in Sources */,
 				71FACDCA24DBE1E100D133E4 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

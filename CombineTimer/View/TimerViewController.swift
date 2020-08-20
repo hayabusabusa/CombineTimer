@@ -14,13 +14,18 @@ final class TimerViewController: UIViewController {
 
     // MARK: Properties
 
+    private var viewModel: TimerViewModelType!
+
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigation()
+        bindViewModel()
     }
 }
+
+// MARK: - Configurations
 
 extension TimerViewController {
 
@@ -28,5 +33,15 @@ extension TimerViewController {
         navigationItem.title = "タイマー"
         navigationItem.titleView = UIImageView(image: Asset.imgTitle.image)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: Asset.icList.image, style: .plain, target: self, action: nil)
+    }
+}
+
+// MARK: - ViewModel
+
+extension TimerViewController {
+
+    private func bindViewModel() {
+        let viewModel = TimerViewModel()
+        self.viewModel = viewModel
     }
 }
