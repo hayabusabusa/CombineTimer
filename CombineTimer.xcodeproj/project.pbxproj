@@ -10,13 +10,14 @@
 		7118EC3124EE0658004A3530 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118EC3024EE0658004A3530 /* Asset.swift */; };
 		7118EC3424EE1484004A3530 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118EC3324EE1484004A3530 /* TimerViewModel.swift */; };
 		7118EC3824EE1E0C004A3530 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118EC3724EE1E0C004A3530 /* ContainerView.swift */; };
+		71B534D224FC9589007F02EF /* TimerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B534D124FC9589007F02EF /* TimerModelTests.swift */; };
+		71B534D524FC9937007F02EF /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B534D424FC9937007F02EF /* XCTestCase+Extension.swift */; };
 		71E98E1424EE368800823328 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E98E1324EE368800823328 /* TimerModel.swift */; };
 		71E98E1824EF6D0D00823328 /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E98E1724EF6D0D00823328 /* Publisher+Extension.swift */; };
 		71FACDA224DBE06800D133E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDA124DBE06800D133E4 /* AppDelegate.swift */; };
 		71FACDA424DBE06800D133E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDA324DBE06800D133E4 /* SceneDelegate.swift */; };
 		71FACDAB24DBE06B00D133E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71FACDAA24DBE06B00D133E4 /* Assets.xcassets */; };
 		71FACDAE24DBE06B00D133E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FACDAC24DBE06B00D133E4 /* LaunchScreen.storyboard */; };
-		71FACDB924DBE06B00D133E4 /* CombineTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDB824DBE06B00D133E4 /* CombineTimerTests.swift */; };
 		71FACDC424DBE08200D133E4 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDC324DBE08200D133E4 /* TimerViewController.swift */; };
 		71FACDC624DBE09900D133E4 /* TimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FACDC524DBE09900D133E4 /* TimerViewController.storyboard */; };
 		71FACDCA24DBE1E100D133E4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACDC924DBE1E100D133E4 /* Button.swift */; };
@@ -36,6 +37,8 @@
 		7118EC3024EE0658004A3530 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		7118EC3324EE1484004A3530 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		7118EC3724EE1E0C004A3530 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		71B534D124FC9589007F02EF /* TimerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModelTests.swift; sourceTree = "<group>"; };
+		71B534D424FC9937007F02EF /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 		71E98E1324EE368800823328 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		71E98E1724EF6D0D00823328 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 		71FACD9E24DBE06800D133E4 /* CombineTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +48,6 @@
 		71FACDAD24DBE06B00D133E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71FACDAF24DBE06B00D133E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71FACDB424DBE06B00D133E4 /* CombineTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombineTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71FACDB824DBE06B00D133E4 /* CombineTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTimerTests.swift; sourceTree = "<group>"; };
 		71FACDBA24DBE06B00D133E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71FACDC324DBE08200D133E4 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		71FACDC524DBE09900D133E4 /* TimerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerViewController.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 				7118EC3324EE1484004A3530 /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		71B534D324FC9925007F02EF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				71B534D424FC9937007F02EF /* XCTestCase+Extension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		71E98E1224EE367600823328 /* Model */ = {
@@ -149,7 +159,8 @@
 		71FACDB724DBE06B00D133E4 /* CombineTimerTests */ = {
 			isa = PBXGroup;
 			children = (
-				71FACDB824DBE06B00D133E4 /* CombineTimerTests.swift */,
+				71B534D124FC9589007F02EF /* TimerModelTests.swift */,
+				71B534D324FC9925007F02EF /* Common */,
 				71FACDBA24DBE06B00D133E4 /* Info.plist */,
 			);
 			path = CombineTimerTests;
@@ -312,7 +323,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71FACDB924DBE06B00D133E4 /* CombineTimerTests.swift in Sources */,
+				71B534D524FC9937007F02EF /* XCTestCase+Extension.swift in Sources */,
+				71B534D224FC9589007F02EF /* TimerModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
