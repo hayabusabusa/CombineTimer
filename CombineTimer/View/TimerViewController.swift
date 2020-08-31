@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 final class TimerViewController: UIViewController {
 
@@ -17,6 +18,7 @@ final class TimerViewController: UIViewController {
     // MARK: Properties
 
     private var viewModel: TimerViewModelType!
+    private var cancelables: Set<AnyCancellable> = Set<AnyCancellable>()
 
     // MARK: Lifecycle
 
@@ -59,5 +61,9 @@ extension TimerViewController {
     private func bindViewModel() {
         let viewModel = TimerViewModel()
         self.viewModel = viewModel
+
+        viewModel.currentSecondsPublisher
+            .assign(to: \.text, on: secondsLabel)
+            .store(in: &cancelables)
     }
 }

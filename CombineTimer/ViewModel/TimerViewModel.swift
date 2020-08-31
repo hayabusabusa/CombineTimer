@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 protocol TimerViewModelInput {
     /// 一時停止のボタンが押された時に呼ばれる.
@@ -20,8 +21,7 @@ protocol TimerViewModelInput {
 }
 
 protocol TimerViewModelOutput {
-    var isTimerValid: Bool { get }
-    var currentSeconds: Int { get }
+    var currentSecondsPublisher: AnyPublisher<String?, Never> { get }
 }
 
 protocol TimerViewModelType {
@@ -31,6 +31,10 @@ protocol TimerViewModelType {
 
 final class TimerViewModel: TimerViewModelType, TimerViewModelInput, TimerViewModelOutput {
 
+    // MARK: Dependency
+
+    private let model: TimerModelProtocol
+
     // MARK: I/O
 
     var input: TimerViewModelInput { self }
@@ -38,27 +42,28 @@ final class TimerViewModel: TimerViewModelType, TimerViewModelInput, TimerViewMo
 
     // MARK: Initializer
 
-    init() {
-        isTimerValid = false
-        currentSeconds = 0
+    init(model: TimerModelProtocol = TimerModel()) {
+        self.model = model
+        self.currentSecondsPublisher = model.countPublisher
+            .map { String(format: "%02i:%02i", $0 / 60 % 60, $0 % 60) }
+            .eraseToAnyPublisher()
     }
 
     // MARK: Input
 
     func tappedPauseButton() {
-        print(#function)
+        model.pauseTimer()
     }
 
     func tappedResetButton() {
-        print(#function)
+        model.resetTimer()
     }
 
     func tappedStartButton() {
-        print(#function)
+        model.startTimer()
     }
 
     // MARK: Output
 
-    var isTimerValid: Bool
-    var currentSeconds: Int
+    var currentSecondsPublisher: AnyPublisher<String?, Never>
 }
