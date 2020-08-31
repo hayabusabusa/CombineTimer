@@ -8,3 +8,8 @@ iOS13 から追加された **Combine** フレームワークを使用したタ�
 - [Mint](https://github.com/yonaskolb/Mint)
 - [SwiftLint](https://github.com/realm/SwiftLint)
 - [SwiftGen](https://github.com/SwiftGen/SwiftGen)
+
+## TODO
+
+- [ ] バックグラウンドへの対応
+- [ ] ViewModel の単体テストの追加
