@@ -45,7 +45,7 @@ final class TimerViewModel: TimerViewModelType, TimerViewModelInput, TimerViewMo
     init(model: TimerModelProtocol = TimerModel()) {
         self.model = model
         self.currentSecondsPublisher = model.countPublisher
-            .map { String(format: "%02i:%02i", $0 / 60 % 60, $0 % 60) }
+            .map { String(format: "%02d:%02i:%02i", $0 / 3600 % 60, $0 / 60 % 60, $0 % 60) }
             .eraseToAnyPublisher()
     }
 
