@@ -23,7 +23,7 @@ final class TimerModel: TimerModelProtocol {
 
     private let countSubject: CurrentValueSubject<Int, Never>
     private let isValidSubject: PassthroughSubject<Bool, Never>
-    private var cancelables: [AnyCancellable] = []
+    private var cancelables = Set<AnyCancellable>()
 
     // MARK: I/O
 
@@ -41,15 +41,12 @@ final class TimerModel: TimerModelProtocol {
         self.isValidSubject = isValidSubject
 
         // NOTE: `FlatMapLatest` で最新の Publisher に切り替え.
-        let isValidSubscriber = isValidSubject
+        isValidSubject
             .flatMapLatest { isValid -> AnyPublisher<Date, Never> in
                 isValid ? Timer.publish(every: 1.0, on: .main, in: .default).autoconnect().eraseToAnyPublisher() : Empty<Date, Never>(completeImmediately: true).eraseToAnyPublisher()
             }.sink { _ in
                 countSubject.send(countSubject.value + 1)
-            }
-
-        // NOTE: `sink()` した Publisher を全て格納
-        cancelables += [isValidSubscriber]
+            }.store(in: &cancelables)
     }
 
     func pauseTimer() {

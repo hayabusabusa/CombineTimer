@@ -18,7 +18,7 @@ final class TimerViewController: UIViewController {
     // MARK: Properties
 
     private var viewModel: TimerViewModelType!
-    private var cancelables: Set<AnyCancellable> = Set<AnyCancellable>()
+    private var cancelables = Set<AnyCancellable>()
 
     // MARK: Lifecycle
 
