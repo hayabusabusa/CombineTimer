@@ -16,7 +16,7 @@ class TimerModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // NOTE: 毎回タイマーを初期化
-        model = TimerModel()
+        model = TimerModel(interval: 0.1)
     }
     
     func test_タイマーの開始が正しく行えることを確認() {
@@ -24,7 +24,7 @@ class TimerModelTests: XCTestCase {
             let expectValues = [0, 1]
             let result = expectValue(of: model.countPublisher, equals: expectValues)
             model.startTimer()
-            wait(for: [result.expectation], timeout: 1)
+            wait(for: [result.expectation], timeout: 0.1)
         }
     }
     
@@ -34,7 +34,7 @@ class TimerModelTests: XCTestCase {
             let result = expectValue(of: model.countPublisher, equals: expectValues)
             model.startTimer()
             model.pauseTimer()
-            wait(for: [result.expectation], timeout: 1)
+            wait(for: [result.expectation], timeout: 0.1)
         }
     }
     
@@ -58,7 +58,7 @@ class TimerModelTests: XCTestCase {
             let expectValues = [0, 1, 2]
             let result = expectValue(of: model.countPublisher, equals: expectValues)
             model.startTimer()
-            wait(for: [result.expectation], timeout: 2)
+            wait(for: [result.expectation], timeout: 0.2)
         }
     }
 }
